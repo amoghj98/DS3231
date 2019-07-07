@@ -25,13 +25,13 @@ uint8_t ds3231::init()
 	//Wire.begin();       // ***NOTE: Uncomment this line if the RTC is the only I2C device in use. Else, call Wire.begin() in the setup function***
 	// ***NOTE: It is always advisable to intialise the I2C bus (by calling Wire.begin()) in the setup function***
 	write8(control,0x04);
-	set_year(0x19);
-	set_month(0x07);
-	set_date(0x02);
-	set_day(tuesday);
-	set_hours(0,0x20);
-	write8(minutes,0x59);
-	write8(seconds,0x55);
+	set_year(0x19);          // Initialise year to 2019
+	set_month(0x07);         // Initialise month to July
+	set_date(0x01);          // Initialise date to 01
+	set_day(monday);         // Initialise day of the week to Monday
+	set_hours(0,0x00);       // Initialise hours to 00 (midnight)
+	write8(minutes,0x00);    // Initialise minutes to 00
+	write8(seconds,0x00);    // Initialise seconds to 00
 	return 0;
 }
 
