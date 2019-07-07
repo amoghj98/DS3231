@@ -1,1 +1,2 @@
-<h2> Arduino Library for DS3231 RTC Module </h2>
+<h2> <b> Arduino Library for DS3231 RTC Module </b> </h2>
+This is a general purpose library for the DS3231 Real-Time-Clock module. It contains full time keeping, alarm and square wave generation capabilities. However, the alarm and square wave generation capabilities may be rendered unusable on some breakout boards due to the absence of connections to the corresponding pins of the IC. If using a breakout board for the DS3231, please check to ensure that it has connections to the INT'/SQW pin.
