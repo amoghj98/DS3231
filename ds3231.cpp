@@ -22,6 +22,8 @@ uint8_t ds3231::write8(uint8_t address, uint8_t data)
 
 uint8_t ds3231::init()
 {
+	//Wire.begin();       // ***NOTE: Uncomment this line if the RTC is the only I2C device in use. Else, call Wire.begin() in the setup function***
+	// ***NOTE: It is always advisable to intialise the I2C bus (by calling Wire.begin()) in the setup function***
 	write8(control,0x04);
 	set_year(0x19);
 	set_month(0x07);
