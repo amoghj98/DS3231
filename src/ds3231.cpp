@@ -320,6 +320,17 @@ uint8_t ds3231::clear_alarm2()
 	return 0;
 }
 
+uint8_t ds3231::is_alarm()
+{
+	uint8_t t =read8(stat);
+	if(t&0x01==0x01)
+		return 1;
+	else if(t&0x02==0x02)
+		return 2;
+	else
+		return 0;
+}
+
 uint8_t ds3231::enable_sq_wave(enum freq f)
 {
 	uint8_t t=read8(control);

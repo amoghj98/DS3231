@@ -159,6 +159,14 @@ public:
 	uint8_t disarm_alarm2();
 	uint8_t clear_alarm2();
 	/*
+		Function to determine whether or not an alarm has been triggered, and if yes, which alarm has been triggered
+		Returns:
+			1 if alarm 1 is triggered
+			2 if alarm 2 is triggered
+			0 if no alarm is triggered
+	*/
+	uint8_t is_alarm();
+	/*
 		Functions for enabling and disabling fixed frequency square waves.
 		***NOTE: enabling these square waves will disable all alarms, since the Alarm Interrupt and Square wave pins are multiplexed***
 	*/
